@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Math Expressions(2)</title>
+</head>
+
+<style>
+    body{
+        text-align: center;
+        
+    }
+    button{
+        width: auto;
+        font-size: larger;
+        color: white;
+        background-color: darkgreen;
+    }
+    h2{
+        border: 1px solid darkgreen;
+        width: 100px;
+        margin: auto;
+        color: green;
+        
+    }
+    table{
+        margin: auto;
+        margin-top: 20px;
+        color: green;
+    }
+</style>
+<body>
+    <h2>Task-1
+
+    </h2>
+    <p id="task-1.1"></p> <br>
+    <p id="task-1.2"></p>
+    <p id="task-1.3"></p><br>
+    <p id="task-1.4"></p>
+    <p id="task-1.5"></p><br>
+    <p id="task-1.6"></p>
+    <p id="task-1.7"></p><br>
+    <p id="task-1.8"></p>
+    <p id="task-1.9"></p><br>
+
+
+    <h2> Task-2</h2>
+    <p id="task-2.1"></p>
+    <p id="task-2.2"></p>
+    <p id="task-2.3"></p>
+    <p id="task-2.4"></p>
+    <p id="task-2.5"></p>
+    <p id="task-2.6"></p>
+
+    <h2>Task-3</h2>
+    <p>
+        " <i>Take a value from user and show the greetings on the browser's screen.</i> "
+    </p>
+    <button onclick="showTheTaskthree()">Click me to run the Task</button>
+    <p id="task-3.1"></p>
+
+    <h2>Task 5</h2>
+    <pre>
+        "Write a program to take input a number from user &
+        display it’s multiplication table on your browser. If user
+        does not enter a new number, multiplication table of 5
+        should be displayed by default.""
+    </pre>
+    <button id="b-task-5" onclick="myFunction()">Click me to show run this Task</button>
+    <p id="task-5.1"></p>
+    <p id="task-5.2"></p>
+    <p id="task-5.3"></p>
+    <p id="task-5.4"></p>
+    <p id="task-5.5"></p>
+    <p id="task-5.6"></p>
+    <p id="task-5.7"></p>
+    <p id="task-5.8"></p>
+    <p id="task-5.9"></p>
+    <p id="task-5.10"></p>
+
+    <h2 style="margin-top: 30px; margin-bottom: 20px;"> Task 6</h2>
+    <p>Making of a short result card <br> (Taking values from user then apply addition and finding out the percentage)</p>
+    <button id="executeButton">Click me to run the Task-6</button>
+    <table>
+        <tr> 
+            <th style="border: 1px solid black;">Subjects</th>
+            <th style="border: 1px solid black;">Total Marks</th>
+            <th style="border: 1px solid black;">obtained Marks</th>
+            <th style="border: 1px solid black;"> persentage</th>
+        </tr>
+        <tr>
+            <td id="subject1" style="border: 1px solid black;"></td>
+            <td id="totalmarks1" style="border: 1px solid black;"></td>
+            <td id="marksobtained1" style="border: 1px solid black;"></td>
+            <td id="pers-1" style="border: 1px solid black;"></td>
+        </tr>
+        <tr>
+            <td id="subject2" style="border: 1px solid black;"></td>
+            <td id="totalmarks2" style="border: 1px solid black;"></td>
+            <td id="marksobtained2" style="border: 1px solid black;"></td>
+            <td id="pers-2" style="border: 1px solid black;"></td>
+        </tr>
+        <tr>
+            <td id="subject3" style="border: 1px solid black;"></td>
+            <td id="totalmarks3" style="border: 1px solid black;"></td>
+            <td id="marksobtained3" style="border: 1px solid black;"></td>
+            <td id="pers-3" style="border: 1px solid black;"></td>
+        </tr>
+    </table>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        //Task 1
+        let a = 10;
+        document.getElementById("task-1.1").innerHTML = "This is the value of a: " + a;
+
+        document.getElementById("task-1.2").innerHTML = "This is the value of ++a: " + ++a;
+        document.getElementById("task-1.3").innerHTML = "Now the value of 'a' is: " + a;
+
+        document.getElementById("task-1.4").innerHTML = "This is the value of a++: " + a++;
+        document.getElementById("task-1.5").innerHTML = "Now the value of  'a'  is : " + a;
+
+        document.getElementById("task-1.6").innerHTML = " The value of '--a'  is : " + --a;
+        document.getElementById("task-1.7").innerHTML = " Now he value of 'a'  is : " + a;
+
+        document.getElementById("task-1.8").innerHTML = " The value of 'a--'  is : " + a--;
+        document.getElementById("task-1.9").innerHTML = " The value of 'a--'  is : " + a;
+        // Task 2
+        var b = 4, c = 2;
+        var result = (--b - --c) + (++c + c--);
+        document.getElementById("task-2.1").innerHTML = "--b: " + b;
+        document.getElementById("task-2.2").innerHTML = "--b - --c: " + (--b - --c);
+        document.getElementById("task-2.3").innerHTML = "--b - --c + ++b: " + ++b;
+        document.getElementById("task-2.4").innerHTML = "--b - --c + ++c + c-- : " + result;
+        document.getElementById("task-2.5").innerHTML = "b?= " + b;
+        document.getElementById("task-2.6").innerHTML = "c?=  " + c;
+        // Task 3
+
+        function showTheTaskthree(){
+        var userName = prompt("plese write your name");
+        var greetings = "Welcome " + userName + " " + "!";
+        alert(greetings);
+        }
+        //Task 4
+        function myFunction(){
+        var userNumber = prompt("PLese write any Number between 1 to 10")
+
+        if (userNumber == "2"||"3"||"4"||"5"||"6"||"7"||"8"||"9"||"10") {
+            document.getElementById("task-5.1").innerHTML = userNumber * 1;
+            document.getElementById("task-5.2").innerHTML = userNumber * 2;
+                document.getElementById("task-5.3").innerHTML = userNumber * 3;
+                document.getElementById("task-5.4").innerHTML = userNumber * 4;
+                document.getElementById("task-5.5").innerHTML = userNumber * 5;
+                document.getElementById("task-5.6").innerHTML = userNumber * 6;
+                document.getElementById("task-5.7").innerHTML = userNumber * 7;
+                document.getElementById("task-5.8").innerHTML = userNumber * 8;
+                document.getElementById("task-5.9").innerHTML = userNumber * 9;
+                document.getElementById("task-5.10").innerHTML = userNumber * 10;
+            }
+            else if (userNumber !== "2"||"3"||"4"||"5"||"6"||"7"||"8"||"9"||"10"){
+                userNumber = 5;
+                document.getElementById("task-5.1").innerHTML = userNumber * 1;
+                document.getElementById("task-5.2").innerHTML = userNumber * 2;
+                document.getElementById("task-5.3").innerHTML = userNumber * 3;
+                document.getElementById("task-5.4").innerHTML = userNumber * 4;
+                document.getElementById("task-5.5").innerHTML = userNumber * 5;
+                document.getElementById("task-5.6").innerHTML = userNumber * 6;
+                document.getElementById("task-5.7").innerHTML = userNumber * 7;
+                document.getElementById("task-5.8").innerHTML = userNumber * 8;
+                document.getElementById("task-5.9").innerHTML = userNumber * 9;
+                document.getElementById("task-5.10").innerHTML = userNumber * 10;
+            }
+            else{
+            alert("PLease enter a valid no")   
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+    // Add event listener to the button
+    var executeButton = document.getElementById("executeButton");
+    executeButton.addEventListener("click", function() {
+        // Code to execute when the button is clicked
+
+        // Copy and paste your existing code here
+        var prompt1 = prompt("Please enter your subject 1");
+        var obtainedMarks1 = prompt("Please enter your first subject's marks");
+        var prompt2 = prompt("Please enter your subject 2");
+        var obtainedMarks2 = prompt("Please enter your second subject's marks");
+        var prompt3 = prompt("Please enter your subject 3");
+        var obtainedMarks3 = prompt("Please enter your third subject's marks");
+        var marksOfEachSubject = 100;
+
+        document.getElementById("subject1").innerHTML = prompt1;
+        document.getElementById("subject2").innerHTML = prompt2;
+        document.getElementById("subject3").innerHTML = prompt3;
+        document.getElementById("totalmarks1").innerHTML = marksOfEachSubject;
+        document.getElementById("totalmarks2").innerHTML = marksOfEachSubject;
+        document.getElementById("totalmarks3").innerHTML = marksOfEachSubject;
+        document.getElementById("marksobtained1").innerHTML = obtainedMarks1;
+        document.getElementById("marksobtained2").innerHTML = obtainedMarks2;
+        document.getElementById("marksobtained3").innerHTML = obtainedMarks3;
+
+        document.getElementById("pers-1").innerHTML = (marksOfEachSubject * obtainedMarks1) / 100 + "%";
+        document.getElementById("pers-2").innerHTML = (marksOfEachSubject * obtainedMarks2) / 100 + "%";
+        document.getElementById("pers-3").innerHTML = (marksOfEachSubject * obtainedMarks3) / 100 + "%";
+    });
+});
+        
+
+
+        // document.getElementById("task-6.2").innerHTML = "Second Subject " + (prompt1 + obtainedMarks1) % marksOfEachSubject;
+        // document.getElementById("task-6.3").innerHTML = "Third Subject" + (prompt1 + obtainedMarks1) % marksOfEachSubject;
+
+
+    </script>
+</body>
+
+</html>
